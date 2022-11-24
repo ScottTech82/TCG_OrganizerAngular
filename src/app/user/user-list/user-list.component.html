@@ -1,1 +1,30 @@
-<p>user-list works!</p>
+<div>
+
+
+    <table class="table table-sm table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Total Cards</th>
+                <th>Admin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.totalCards}}</td>
+                <td>{{u.isAdmin}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
