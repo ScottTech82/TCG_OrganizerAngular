@@ -1,13 +1,18 @@
 <div>
     <form>
-        <span>(***) TCG Organizer Login (***)</span><br>
-        <table class="table table-sm">
+        <h3>(***) TCG Organizer Login (***)</h3><br>
+        <table class="table table-sm table-hover" id="usertable">
             <thead>
-                <th>Users</th>
+                <tr>
+                    <th>Users</th>
+                </tr>
             </thead>
-            <tbody *ngFor="let u of users">
-                <td (click)="click()">{{u.username}}</td>
-                <td *ngIf="userclick" [(ngModel)]="username"><input [(ngModel)]="password" placeholder="password?" name="password" size="30"  ></td>
+            <tbody *ngIf="users">
+                <tr *ngFor="let u of users">
+                    <td (click)="clickMe()">{{u.username}}</td>
+                    <td *ngIf="userclick" [(ngModel)]="username" name="username"><input [(ngModel)]="password" placeholder="password?" name="password" size="30"  ></td>
+
+                </tr>
             </tbody>
         </table>
         <br>

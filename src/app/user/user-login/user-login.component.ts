@@ -24,7 +24,7 @@ export class UserLoginComponent implements OnInit {
     private usersvc: UserService
   ) { }
 
-  click(): void {
+  clickMe(): void {
     this.userclick = !this.userclick;
     
   }
@@ -51,6 +51,7 @@ export class UserLoginComponent implements OnInit {
   ngOnInit(): void {
     this.usersvc.list().subscribe({
       next: (res) => {
+        console.debug("users:", res);
         this.users = res;
       },
       error: (err) => {
