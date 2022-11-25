@@ -1,1 +1,38 @@
-<p>user-detail works!</p>
+<div>
+    <tcgo-head [pageTitle]="pageTitle"></tcgo-head>
+
+    <table class="table table-sm">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td><input [(ngModel)]="user.id" type="number" disabled></td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td><input [(ngModel)]="user.name" size="25" [disabled]="detailPage"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input [(ngModel)]="user.email" size="25" [disabled]="detailPage"></td>
+            </tr>
+            <tr>
+                <th>Total Cards</th>
+                <td><input [(ngModel)]="user.totalCards" type="number" [disabled]="detailPage"></td>
+            </tr>
+            <tr>
+                <th>Admin</th>
+                <td><input [(ngModel)]="user.isAdmin" type="checkbox" [disabled]="detailPage"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm">
+        <tr>
+            <th></th>
+            <td id="tddelete">
+                <button id="deletebtn" (click)="deleteUser()" class="btn btn-info" 
+                [disabled]="isNotAdmin">Delete User!</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
