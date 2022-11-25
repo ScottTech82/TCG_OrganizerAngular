@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './misc/menu/menu.component';
 import { MenuitemComponent } from './misc/menuitem/menuitem.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { HeadComponent } from './common/head/head.component';
+import { UserNewComponent } from './user/user-new/user-new.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     MenuitemComponent,
-    UserListComponent
+    UserListComponent,
+    HeadComponent,
+    UserNewComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
