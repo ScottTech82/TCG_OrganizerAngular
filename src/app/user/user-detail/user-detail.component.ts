@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
 
@@ -13,12 +14,14 @@ export class UserDetailComponent implements OnInit {
   pageTitle: string = "-- User Details --";
   user!: User;
   detailPage: boolean = true;
+  loginUser!: User;
   isNotAdmin: boolean = true;
 
   constructor(
     private usersvc: UserService,
     private route: ActivatedRoute, 
-    private router: Router
+    private router: Router, 
+    private sys: SystemService
 
   ) { }
 
@@ -45,8 +48,8 @@ export class UserDetailComponent implements OnInit {
         console.error(err);
       }
     });
-
-    if(this.user.isAdmin === true) {
+    this.loginUser = this.sys.user;
+    if(this.loginUser.isAdmin === true) {
       this.isNotAdmin = !this.isNotAdmin;
     }
   }

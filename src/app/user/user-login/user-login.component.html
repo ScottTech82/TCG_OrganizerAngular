@@ -1,0 +1,23 @@
+<div>
+    <form>
+        <span>(***) TCG Organizer Login (***)</span><br>
+        <table class="table table-sm">
+            <thead>
+                <th>Users</th>
+            </thead>
+            <tbody *ngFor="let u of users">
+                <td (click)="click()">{{u.username}}</td>
+                <td *ngIf="userclick" [(ngModel)]="username"><input [(ngModel)]="password" placeholder="password?" name="password" size="30"  ></td>
+            </tbody>
+        </table>
+        <br>
+        <div id="loginMessage" class="text-danger h5">{{message}}</div>
+    </form>
+</div>
+
+<!--
+Would like to have the login screen show a table with the current users.
+On click it would expand another row asking for password input.
+This would have to auto pass in the username of the clicked user though..
+
+-->

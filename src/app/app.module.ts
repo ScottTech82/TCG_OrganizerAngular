@@ -11,6 +11,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { HeadComponent } from './common/head/head.component';
 import { UserNewComponent } from './user/user-new/user-new.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { E404Component } from './misc/e404/e404.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
     UserListComponent,
     HeadComponent,
     UserNewComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserLoginComponent,
+    E404Component
   ],
   imports: [
     BrowserModule,
