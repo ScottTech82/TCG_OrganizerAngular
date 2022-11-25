@@ -49,6 +49,14 @@ export class UserLoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.usersvc.list().subscribe({
+      next: (res) => {
+        this.users = res;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
 }
